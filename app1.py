@@ -12,7 +12,7 @@ def Word2():
    return translate(word2)
 
 def Permission():
-  permission = input("wanna try again? type Y for yes or N for no: ")
+  permission = input("wanna try again? Enter Y if yes or N if no: ")
   if permission == "Y":
     return Word2()
   else: 
@@ -25,7 +25,7 @@ def translate(word):
   elif get_close_matches(word, data.keys()) != []: 
   #alt len(get_close_matches(word, data.keys()))                   
     print ("do you mean '%s'" % get_close_matches(word, data.keys())[0])
-    chance = input("type Y for yes or N for no: ")
+    chance = input("Enter Y if yes or N if no: ")
     if chance == "Y":
       translate(get_close_matches(word, data.keys())[0])
     elif chance == "N":
